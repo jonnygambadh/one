@@ -1,4 +1,7 @@
-<html lang="en">
+---
+import { tw } from 'twind'
+---
+<html lang="en" class={`${tw('h-full')}`}>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -14,7 +17,7 @@
     }
     </script>
 	</head>
-  <body style={{ margin: 0 }}>
+  <body class={`${tw('h-full')}`}>
     <slot />
 	</body>
 </html>

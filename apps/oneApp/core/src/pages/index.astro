@@ -6,6 +6,17 @@ import Navbar from '../components/Navbar'
 ---
 
 <BaseLayout>
-  <Navbar client:only="react" />
-  <PluginA client:only="react" />
+  <main class="main">
+    <Navbar client:only="react" />
+    <PluginA client:only="react" />
+  </main>
 </BaseLayout>
+
+<style>
+  .main {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-column-gap: 5px;
+    height: 100%;
+  }
+</style>
