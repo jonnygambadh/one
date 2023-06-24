@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../layouts/base.astro'
+import PluginA from '../components/PluginA'
 ---
 
 <BaseLayout>
   test
+  <PluginA client:only="react" />
 </BaseLayout>
