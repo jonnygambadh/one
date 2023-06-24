@@ -1,22 +1,41 @@
 ---
 import BaseLayout from '../layouts/base.astro'
 
-import PluginA from '../components/PluginA'
 import Navbar from '../components/Navbar'
+import Header from '../components/Header'
+import PluginA from '../components/PluginA'
 ---
 
 <BaseLayout>
   <main class="main">
-    <Navbar client:only="react" />
-    <PluginA client:only="react" />
+    <div class="navbar"><Navbar client:only="react" /></div>
+    <div class="header"><Header client:only="react" /></div>
+    <div class="plugin"><PluginA client:only="react" /></div>
   </main>
 </BaseLayout>
 
 <style>
   .main {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-column-gap: 5px;
     height: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+      'navbar header header'
+      'navbar plugin plugin';
+    grid-column-gap: 5px;
+  }
+
+  .navbar {
+    grid-area: navbar;
+  }
+
+  .header {
+    grid-area: header;
+    padding: 5px;
+  }
+
+  .plugin {
+    grid-area: plugin;
   }
 </style>
