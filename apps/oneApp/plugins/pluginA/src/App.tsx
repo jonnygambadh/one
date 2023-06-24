@@ -1,10 +1,7 @@
-import { useState } from "react";
+import TableA from "./components/tableA";
 
 function App() {
-  const [counter, setCounter] = useState(0);
-  return (
-    <button onClick={() => setCounter((prev) => prev + 1)}>{counter}</button>
-  );
+  return <TableA />;
 }
 
 export default App;
