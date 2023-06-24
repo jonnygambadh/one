@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/base.astro'
+
+import Header from '../components/Header'
+import PluginA from '../components/PluginA'
+---
+
+<BaseLayout>
+  <main class="main">
+    <div class="header"><Header client:only="react" /></div>
+    <div class="plugin"><PluginA client:only="react" /></div>
+  </main>
+</BaseLayout>
+
+<style>
+  .main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+      'header header'
+      'plugin plugin';
+    grid-column-gap: 5px;
+  }
+
+  .header {
+    grid-area: header;
+    padding: 5px;
+  }
+
+  .plugin {
+    grid-area: plugin;
+  }
+</style>
