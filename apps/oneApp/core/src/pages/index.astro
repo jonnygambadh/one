@@ -1,8 +1,11 @@
 ---
 import BaseLayout from '../layouts/base.astro'
+
 import PluginA from '../components/PluginA'
+import Navbar from '../components/Navbar'
 ---
 
 <BaseLayout>
-  <div class="plugin"> <PluginA client:only="react" /> </div>
+  <Navbar client:only="react" />
+  <PluginA client:only="react" />
 </BaseLayout>
