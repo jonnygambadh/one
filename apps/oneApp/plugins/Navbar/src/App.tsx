@@ -15,34 +15,25 @@ function App({ uid, name }: { uid: string; name: string }) {
         />
       </div>
       <nav className={`${tw("flex flex-1 flex-col")}`}>
-        <ul role="list" className="flex flex-1 flex-col gap-y-7">
+        <ul role="list" className={`${tw("flex flex-1 flex-col")}`}>
           <li>
-            <ul role="list" className="-mx-2 space-y-1">
-              <li>uno</li>
-              <li>dos</li>
-            </ul>
-          </li>
-          <li>
-            <div
-              className={`${tw(
-                "text-xs font-semibold leading-6 text-indigo-200"
-              )}`}
-            >
-              Your teams {name}
-            </div>
-            <ul role="list" className={`${tw("-mx-2 mt-2 space-y-1")}`}>
-              <li>{uid}</li>
-              <li>cuatro</li>
-            </ul>
-          </li>
-          <li className={`${tw("mt-auto")}`}>
             <a
-              href="#"
+              href="/"
               className={`${tw(
                 "group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
               )}`}
             >
-              Settings
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a
+              href="/reports"
+              className={`${tw(
+                "group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
+              )}`}
+            >
+              Reports
             </a>
           </li>
         </ul>

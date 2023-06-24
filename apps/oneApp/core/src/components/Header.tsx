@@ -1,10 +1,10 @@
 import Plugin from "http://localhost:7300/bundle.js";
-import {tw} from "twind";
+import { tw } from "twind";
 
-const Header = () => {
+const Header = ({name}:{name:string}) => {
   return (
     <>
-      <Plugin name="Dashboard" />
+      <Plugin name={name} />
       <hr
         className={`${tw("h-px my-8 bg-gray-200 border-0 dark:bg-gray-700")}`}
       />
