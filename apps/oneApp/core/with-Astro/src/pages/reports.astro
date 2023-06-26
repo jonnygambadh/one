@@ -3,14 +3,14 @@ import BaseLayout from '../layouts/base.astro'
 
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
-import PluginA from '../components/PluginA'
+import Reports from '../components/Reports'
 ---
 
 <BaseLayout>
   <main class="main">
     <div class="navbar"><Navbar client:only="react" /></div>
       <div class="header"><Header name="Reports" client:only="react" /></div>
-    <div class="plugin"><PluginA client:only="react" /></div>
+    <div class="plugin"><Reports client:only="react" /></div>
   </main>
 </BaseLayout>
 

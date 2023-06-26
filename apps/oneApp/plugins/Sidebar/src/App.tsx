@@ -1,6 +1,8 @@
 import { tw } from "twind";
 
 function App({ uid, name }: { uid: string; name: string }) {
+  console.log('name: ', name);
+  console.log('uid: ', uid);
   return (
     <div
       className={`${tw(
