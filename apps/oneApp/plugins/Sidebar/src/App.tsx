@@ -38,6 +38,16 @@ function App({ uid, name }: { uid: string; name: string }) {
               Reports
             </a>
           </li>
+          <li>
+            <a
+              href="/orders"
+              className={`${tw(
+                "group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
+              )}`}
+            >
+              Orders
+            </a>
+          </li>
         </ul>
       </nav>
     </div>

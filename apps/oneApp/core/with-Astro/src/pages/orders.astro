@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/base.astro'
+
+import Navbar from '../components/Navbar'
+import Header from '../components/Header'
+import Orders from '../components/Orders'
+---
+
+<BaseLayout>
+  <main class="main">
+    <div class="navbar"><Navbar delay={1000} client:only="react" /></div>
+    <div class="header"><Header delay={1000} name={"Orders"} client:only="react" /></div>
+    <div class="orders"><Orders client:only="react" /></div>
+  </main>
+</BaseLayout>
+
+<style>
+  .main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas:
+      'navbar header header'
+      'navbar orders orders';
+    grid-column-gap: 5px;
+  }
+
+  .navbar {
+    grid-area: navbar;
+  }
+
+  .header {
+    grid-area: header;
+    padding: 5px;
+  }
+
+  .orders {
+    grid-area: orders;
+  }
+</style>
