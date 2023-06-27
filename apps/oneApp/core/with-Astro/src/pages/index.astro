@@ -8,8 +8,8 @@ import PluginA from '../components/PluginA'
 
 <BaseLayout>
   <main class="main">
-    <div class="navbar"><Navbar client:only="react" /></div>
-    <div class="header"><Header name={"Dashboard"} client:only="react" /></div>
+    <div class="navbar"><Navbar delay={1000} client:only="react" /></div>
+    <div class="header"><Header delay={1000} name={"Dashboard"} client:only="react" /></div>
     <div class="plugin"><PluginA client:only="react" /></div>
   </main>
 </BaseLayout>
@@ -20,7 +20,7 @@ import PluginA from '../components/PluginA'
     display: grid;
     grid-template-columns: 200px 1fr 1fr;
     grid-template-rows: 100px 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       'navbar header header'
       'navbar plugin plugin';
     grid-column-gap: 5px;
