@@ -1,4 +1,4 @@
-import Plugin from "http://localhost:7100/bundle.js";
+import Plugin from "http://localhost:7500/bundle.js";
 
 const Dashboard = () => {
   return (
