@@ -1,6 +1,6 @@
 import Plugin from "http://localhost:7100/bundle.js";
 
-const PluginA = () => {
+const Dashboard = () => {
   return (
     <div>
       <Plugin />
@@ -8,4 +8,4 @@ const PluginA = () => {
   );
 };
 
-export default PluginA;
+export default Dashboard;

@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../../layouts/base.astro'
 
-import PluginA from '../../components/PluginA'
+import Dashboard from '../../components/Dashboard'
 ---
 
 <BaseLayout>
   <main class="main">
-    <div class="plugin"><PluginA client:only="react" /></div>
+    <div class="dashboard"><Dashboard client:only="react" /></div>
   </main>
 </BaseLayout>
 
