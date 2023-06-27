@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/base.astro'
+
+import PluginA from '../../components/PluginA'
+---
+
+<BaseLayout>
+  <main class="main">
+    <div class="plugin"><PluginA client:only="react" /></div>
+  </main>
+</BaseLayout>
+
+<style>
+  div {
+    padding: 2px;
+  }
+</style>
