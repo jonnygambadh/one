@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/base.astro'
+
+import Orders from '../../components/Orders'
+---
+
+<BaseLayout>
+  <main class="main">
+    <div class="orders"><Orders client:only="react" /></div>
+  </main>
+</BaseLayout>
+
+<style>
+  div {
+    padding: 2px;
+  }
+</style>
